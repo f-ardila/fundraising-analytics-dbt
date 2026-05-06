@@ -38,3 +38,8 @@ The project is organized into three layers:
 - dbt
 - BigQuery
 - Python (for data generation)
+
+## dbt commands
+1. Build models   → dbt run
+2. Validate models → dbt test
+3. Buld and validate → dbt build
