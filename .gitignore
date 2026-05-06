@@ -1,0 +1,6 @@
+target/
+dbt_packages/
+.env
+*.log
+.DS_Store
+.ipynb_checkpoints/

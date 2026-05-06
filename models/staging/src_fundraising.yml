@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: fundraising_raw
+    database: project-b94c7b19-62fe-4588-b21
+    schema: fundraising_raw
+    tables:
+      - name: raw_users
+      - name: raw_nonprofits
+      - name: raw_campaigns
+      - name: raw_donations
+      - name: raw_payments
+
+
