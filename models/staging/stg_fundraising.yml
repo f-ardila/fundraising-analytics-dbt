@@ -1,6 +1,14 @@
 version: 2
 
 models:
+  - name: stg_campaigns
+    description: Cleaned campaigns records from the raw campaigns table.
+    columns:
+      - name: campaign_id
+        tests:
+          - unique
+          - not_null
+
   - name: stg_donations
     description: Cleaned donation records from the raw donations table.
     columns:
@@ -8,8 +16,31 @@ models:
         tests:
           - unique
           - not_null
-
       - name: donation_status
         tests:
           - accepted_values:
               values: ['completed', 'failed', 'refunded']
+              
+  - name: stg_nonprofits
+    description: Cleaned nonprofits records from the raw nonprofits table.
+    columns:
+      - name: nonprofit_id
+        tests:
+          - unique
+          - not_null
+              
+  - name: stg_payments
+    description: Cleaned payments records from the raw payments table.
+    columns:
+      - name: payment_id
+        tests:
+          - unique
+          - not_null
+              
+  - name: stg_users
+    description: Cleaned users records from the raw users table.
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
