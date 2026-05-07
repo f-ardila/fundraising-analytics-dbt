@@ -27,6 +27,8 @@ The project is organized into three layers:
   - dim_campaigns
   - campaign_performance
 
+![dbt lineage graph](assets/lineage_graph.png)
+
 ## Key Logic
 
 - Failed donations → excluded or zero revenue
