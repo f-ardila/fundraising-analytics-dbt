@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fct_donations
+    description: Analytics-ready donation fact table.
+
+    columns:
+      - name: donation_id
+        tests:
+          - unique
+          - not_null
+
+      - name: adjusted_net_revenue
+        description: Net donation revenue after fees and refunds.
+
+  - name: campaign_performance
+    description: Analytics-ready campaign table.
+
+    columns:
+      - name: campaign_id
+        tests:
+          - unique
+          - not_null
