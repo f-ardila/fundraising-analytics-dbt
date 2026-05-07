@@ -5,7 +5,7 @@
 name: 'fundraising_analytics'
 version: '1.0.0'
 
-# This setting configures which "profile" dbt uses for this project. Determines which dataset to write to.
+# This setting configures which "profile" dbt uses for this project. Determines which dataset to write to. Usually in ~/.dbt/profiles.yml
 profile: 'fundraising_analytics'
 
 # These configurations specify where dbt should look for different types of files.
@@ -26,11 +26,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
-# In this example config, we tell dbt to build all models in the example/
-# directory as views. These settings can be overridden in the individual model
-# files using the `{{ config(...) }}` macro.
+# Build all models in the staging directory as views. 
+# These settings can be overridden in the individual model files using the `{{ config(...) }}` macro.
 models:
   fundraising_analytics:
-    # Config indicated by + and applies to all files under models/example/
-    example:
+    # Config indicated by + and applies to all files under models/staging/
+    staging:
       +materialized: view
